@@ -115,14 +115,19 @@ li:nth-child(5) {
   font-size: 12px;
   margin: 15px 12px 0 17px;
 }
+.textsecond {
+  display: block;
+  color: white;
+  font-size: 12px;
 
+  margin: 0 12px 0 17px;
+}
 .questiohBox_text {
   text-align: left;
 }
 
 .meme {
   width: 107px;
-  height: 60px;
   margin-top: 8px;
   transform: translateX(-30%);
 }
@@ -293,133 +298,26 @@ li:nth-child(5) {
   height: 10px;
 }
 
-.bar div:nth-child(1) {
-  animation-delay: -3.4s;
+.name_strong {
+  margin-right: 2px;
 }
 
-.bar div:nth-child(2) {
-  animation-delay: -3.3s;
+.text_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.bar div:nth-child(3) {
-  animation-delay: -3.2s;
+.record_info {
+  display: flex;
+  color: #e48927;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
 
-.bar div:nth-child(4) {
-  animation-delay: -3.1s;
-}
-
-.bar div:nth-child(5) {
-  animation-delay: -3s;
-}
-
-.bar div:nth-child(6) {
-  animation-delay: -2.9s;
-}
-
-.bar div:nth-child(7) {
-  animation-delay: -2.8s;
-}
-
-.bar div:nth-child(8) {
-  animation-delay: -2.7s;
-}
-
-.bar div:nth-child(9) {
-  animation-delay: -2.6s;
-}
-
-.bar div:nth-child(10) {
-  animation-delay: -2.5s;
-}
-
-.bar div:nth-child(11) {
-  animation-delay: -2.4s;
-}
-
-.bar div:nth-child(12) {
-  animation-delay: -2.3s;
-}
-
-.bar div:nth-child(13) {
-  animation-delay: -2.2s;
-}
-
-.bar div:nth-child(14) {
-  animation-delay: -2.1s;
-}
-
-.bar div:nth-child(15) {
-  animation-delay: -2s;
-}
-
-.bar div:nth-child(16) {
-  animation-delay: -1.9s;
-}
-
-.bar div:nth-child(17) {
-  animation-delay: -1.8s;
-}
-
-.bar div:nth-child(18) {
-  animation-delay: -1.7s;
-}
-
-.bar div:nth-child(19) {
-  animation-delay: -1.6s;
-}
-
-.bar div:nth-child(20) {
-  animation-delay: -1.5s;
-}
-
-.bar div:nth-child(21) {
-  animation-delay: -1.4s;
-}
-
-.bar div:nth-child(22) {
-  animation-delay: -1.3s;
-}
-
-.bar div:nth-child(23) {
-  animation-delay: -1.2s;
-}
-
-.bar div:nth-child(24) {
-  animation-delay: -1.1s;
-}
-
-.bar div:nth-child(25) {
-  animation-delay: -1s;
-}
-
-.bar div:nth-child(26) {
-  animation-delay: -0.9s;
-}
-
-.bar div:nth-child(27) {
-  animation-delay: -0.8s;
-}
-
-.bar div:nth-child(28) {
-  animation-delay: -0.7s;
-}
-
-.bar div:nth-child(29) {
-  animation-delay: -0.6s;
-}
-
-@keyframes bar {
-  0%,
-  75% {
-    transform: scaleY(1);
-    background-color: white;
-  }
-  10%,
-  50% {
-    background-color: scaleY(1.5);
-  }
-  25% {
-    transform: scaleY(3);
-  }
+.aidiv {
+  height: 1px;
+  overflow: hidden;
 }

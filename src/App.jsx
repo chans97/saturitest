@@ -21,7 +21,7 @@ function App() {
           <Route
             exact
             path="/question"
-            element={<Question stage={stage} setStage={setStage} />}
+            element={<Question name={name} stage={stage} setStage={setStage} />}
           />
         </Routes>
       </BrowserRouter>
