@@ -1,0 +1,13 @@
+diff --git a/node_modules/@tensorflow-models/speech-commands/cloudbuild.yml b/node_modules/@tensorflow-models/speech-commands/cloudbuild.yml
+index b8fef9a..ed97563 100644
+--- a/node_modules/@tensorflow-models/speech-commands/cloudbuild.yml
++++ b/node_modules/@tensorflow-models/speech-commands/cloudbuild.yml
+@@ -39,7 +39,7 @@ steps:
+   waitFor: ['yarn']
+ 
+ # General configuration
+-timeout: 1800s
++timeout: 1700s
+ logsBucket: 'gs://tfjs-build-logs'
+ substitutions:
+   _NIGHTLY: ''
