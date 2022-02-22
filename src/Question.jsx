@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useRef } from "react";
 import styles from "./question_style.module.css";
 import { useNavigate } from "react-router-dom";
-// const tf = require("@tensorflow/tfjs");
+const tf = require("@tensorflow/tfjs");
 const speechCommands = require("@tensorflow-models/speech-commands");
 
 function Question({ name, url, setStage, stage }) {
