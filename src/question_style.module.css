@@ -15,19 +15,11 @@
   font-family: "Noto Sans KR";
 }
 
-html,
-body {
+.main {
   height: 100vh;
-  margin: 0;
-}
-
-body {
   height: 100vh;
   width: 360px;
   margin: 0 auto;
-}
-
-.main {
   height: 100vh;
   background: no-repeat url("image/schoolBackgound.png") center/cover;
 }
@@ -79,7 +71,8 @@ li:nth-child(5) {
   height: 120px;
   position: relative;
   left: 50%;
-  transform: translate(-66%);
+  transform: translate(-140%) scale(0);
+  transition: all 1.2s ease-in-out;
 }
 
 .questionTri {
@@ -132,6 +125,9 @@ li:nth-child(5) {
   transform: translateX(-30%);
 }
 
+.doneStep {
+  background-color: transparent;
+}
 .speechContainer {
   display: flex;
   margin-top: 12px;
@@ -140,7 +136,8 @@ li:nth-child(5) {
   width: 297px;
   height: 60px;
   left: 50%;
-  transform: translate(-45%);
+  transform: translate(+65%) scale(0);
+  transition: all 1.2s ease-in-out;
 }
 
 .speechTri {
@@ -165,7 +162,9 @@ li:nth-child(5) {
 }
 
 .recordBtn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   margin-top: 96px;
   background-color: #e48927;
@@ -174,11 +173,11 @@ li:nth-child(5) {
   width: 40px;
   height: 40px;
   line-height: 100%;
+  cursor: pointer;
 }
 
 .mic_icon {
-  width: 14px;
-  height: 19px;
+  height: 50px;
 }
 
 .modal_wrap {
@@ -234,6 +233,7 @@ li:nth-child(5) {
   background-color: transparent;
   width: 25px;
   display: none;
+  cursor: pointer;
 }
 
 .playBtn:focus {
@@ -255,6 +255,7 @@ li:nth-child(5) {
   background-color: transparent;
   width: 25px;
   display: none;
+  cursor: pointer;
 }
 
 .stopBtn {
@@ -266,6 +267,8 @@ li:nth-child(5) {
   border-radius: 50px;
   line-height: 100%;
   bottom: 31px;
+  background-color: white;
+  cursor: pointer;
 }
 
 .stop_icon {
@@ -320,4 +323,13 @@ li:nth-child(5) {
 .aidiv {
   height: 1px;
   overflow: hidden;
+}
+
+.success {
+  position: absolute;
+  width: 500px;
+  z-index: 100;
+  top: 30%;
+  transform: translateX(0px) rotate(250deg) scale(0);
+  transition: all 1.5s;
 }

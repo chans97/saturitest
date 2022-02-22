@@ -1,0 +1,92 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@font-face {
+  font-family: "SF_HambakSnow";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Noto Sans KR";
+}
+
+.main {
+  margin: 0 auto;
+  width: 360px;
+  height: 100vh;
+  text-align: center;
+  background-color: #e48927;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.comment {
+  margin: 80px 0px 21px 0px;
+  font-family: "SF_HambakSnow";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  color: white;
+}
+
+.endingLogo {
+  width: 260px;
+  display: block;
+  margin: 0 auto;
+}
+
+.text {
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 30px 0px 0px 0px;
+}
+.text2 {
+  font-weight: bold;
+  font-size: 12px;
+  color: #ffffff;
+  margin: 0px 0px 0px 0px;
+}
+
+.button {
+  width: 188px;
+  height: 55px;
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+}
+.button2 {
+  width: 188px;
+  height: 55px;
+  display: block;
+  margin: 0px auto;
+  border: 1px solid #ffffff;
+  border-radius: 35px;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+}
+
+.success {
+  position: absolute;
+  top: 52vh;
+  transform: translateX(-40px) scale(5) rotate(270deg);
+  width: 230px;
+  transition: all 1.5s ease-in-out;
+}

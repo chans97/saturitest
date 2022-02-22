@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./home_style_mobile.module.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-function Home(props) {
+function Home({ url }) {
   let history = useNavigate();
   const goExplain = () => {
     history("/explain");
   };
+  const [users, setUsers] = useState(null);
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        // 요청이 시작 할 때에는 error 와 users 를 초기화하고
+        setUsers(null);
+        // loading 상태를 true 로 바꿉니다.
+        const response = await axios.get(url + "api/level/5/?format=json");
+        setUsers(response.data); // 데이터는 response.data 안에 들어있습니다.
+        console.log(response.data);
+      } catch (e) {}
+    };
+
+    fetchUsers();
+  });
+
   return (
     <div>
       <section className={styles.main}>
@@ -23,7 +40,7 @@ function Home(props) {
             alt="jungjunha"
           />
           <button onClick={goExplain} className={styles.startBtn}>
-            <a>테스트 스타뜨!</a>
+            <span>테스트 스타뜨!</span>
           </button>
           <span className={styles.infoText}>
             <span className={styles.total}>2022</span>명 중{" "}
@@ -48,62 +65,16 @@ function Home(props) {
             />
           </div>
           <div className={styles.names_content}>
-            <span className={styles.name}>박명수하하</span>
-            <span className={styles.name}>호</span>
-            <span className={styles.name}>랄랄랄</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>후</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수하하하</span>
-            <span className={styles.name}>박</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수하하</span>
-            <span className={styles.name}>호</span>
-            <span className={styles.name}>라라라</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>호</span>
-            <span className={styles.name}>랄랄랄</span>
-            <span className={styles.name}>박명수하하호</span>
-            <span className={styles.name}>하</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
-            <span className={styles.name}>박명수</span>
+            {users ? (
+              users.map((user) => (
+                <span className={styles.name} key={user.id}>
+                  {user.name}
+                </span>
+              ))
+            ) : (
+              <span className={styles.name}>....로딩중입니다....</span>
+            )}
+            <span></span>
           </div>
           <hr />
         </div>

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // const tf = require("@tensorflow/tfjs");
 const speechCommands = require("@tensorflow-models/speech-commands");
 
-function Question({ name, url, setStage, stage }) {
+function Question2({ name, url, setStage, stage }) {
   const recordBtn = useRef();
   const modalWrap = useRef();
   const modal = useRef();
@@ -38,7 +38,7 @@ function Question({ name, url, setStage, stage }) {
   let seoulWoman = new Array(0);
 
   useEffect(() => {
-    setStage(1);
+    setStage(2);
     init();
     questionContainer.current.style.transform = "translate(-66%) scale(1)";
     setTimeout(() => {
@@ -284,7 +284,7 @@ function Question({ name, url, setStage, stage }) {
       result_img.current.style.transform = "translateX(-250px) rotate(0deg)";
 
       setTimeout(() => {
-        history("/question2");
+        history("/question3");
       }, 2000);
     } else {
       result_img.current.src = "image/fail.png";
@@ -312,27 +312,26 @@ function Question({ name, url, setStage, stage }) {
       <section className={styles.main}>
         <div className={styles.layer}>
           <ul>
+            <li className={styles.doneStep}>🏫</li>
             <li className={styles.nowStep}></li>
-            <li></li>
             <li></li>
             <li></li>
             <li></li>
           </ul>
           <h4 className={styles.info}>
-            첫날 솩쌤이 칠판에 적힌 문제를
+            하교 후 친구들과 든킨도나쓰에 간 당신..
             <br />
-            읽어보라고 한다
+            블루베리스무디가 먹고 싶다.
           </h4>
           <section ref={questionContainer} className={styles.questionContainer}>
             <div className={styles.questionTri}></div>
             <div className={styles.questionBox}>
               <span className={`${styles.questiohBox_text} ${styles.text}`}>
-                전학생 <strong className={styles.name_strong}>{name}</strong>
-                문제 읽어봐라
+                아..블루베리스무디 먹고 싶다..
               </span>
               <img
                 className={styles.meme}
-                src="image/meme_question1.jpg"
+                src="image/meme_question2.jpg"
                 alt="meme"
               />
             </div>
@@ -347,7 +346,7 @@ function Question({ name, url, setStage, stage }) {
                 <span
                   className={`${styles.speechBox_text} ${styles.textsecond}`}
                 >
-                  <strong id="strong">이에 이승의 이의 이승 (2^e, e^2)</strong>
+                  <strong id="strong">블루베리스무디 하나 주이소</strong>
                 </span>
               </div>
             </div>
@@ -461,4 +460,4 @@ function Question({ name, url, setStage, stage }) {
   );
 }
 
-export default Question;
+export default Question2;

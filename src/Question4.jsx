@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 // const tf = require("@tensorflow/tfjs");
 const speechCommands = require("@tensorflow-models/speech-commands");
 
-function Question({ name, url, setStage, stage }) {
+function Question4({ name, url, setStage, stage }) {
   const recordBtn = useRef();
   const modalWrap = useRef();
   const modal = useRef();
@@ -38,7 +38,7 @@ function Question({ name, url, setStage, stage }) {
   let seoulWoman = new Array(0);
 
   useEffect(() => {
-    setStage(1);
+    setStage(4);
     init();
     questionContainer.current.style.transform = "translate(-66%) scale(1)";
     setTimeout(() => {
@@ -280,11 +280,11 @@ function Question({ name, url, setStage, stage }) {
         cnt++;
       }
     });
-    if (cnt > 4) {
+    if (cnt > 6) {
       result_img.current.style.transform = "translateX(-250px) rotate(0deg)";
 
       setTimeout(() => {
-        history("/question2");
+        history("/question5");
       }, 2000);
     } else {
       result_img.current.src = "image/fail.png";
@@ -312,27 +312,27 @@ function Question({ name, url, setStage, stage }) {
       <section className={styles.main}>
         <div className={styles.layer}>
           <ul>
+            <li className={styles.doneStep}>🏫</li>
+            <li className={styles.doneStep}>🥯</li>
+            <li className={styles.doneStep}>👨‍👨‍👧</li>
             <li className={styles.nowStep}></li>
-            <li></li>
-            <li></li>
-            <li></li>
             <li></li>
           </ul>
           <h4 className={styles.info}>
-            첫날 솩쌤이 칠판에 적힌 문제를
+            드디어 찾아온 주말, <br />
+            당신은 친구들과 경주월드에 가게 되었다.
             <br />
-            읽어보라고 한다
+            자이로드롭을 탄 당신...
           </h4>
           <section ref={questionContainer} className={styles.questionContainer}>
             <div className={styles.questionTri}></div>
             <div className={styles.questionBox}>
               <span className={`${styles.questiohBox_text} ${styles.text}`}>
-                전학생 <strong className={styles.name_strong}>{name}</strong>
-                문제 읽어봐라
+                어라? 끝도 없이 올라간다.
               </span>
               <img
                 className={styles.meme}
-                src="image/meme_question1.jpg"
+                src="image/meme_question4.jpg"
                 alt="meme"
               />
             </div>
@@ -347,7 +347,9 @@ function Question({ name, url, setStage, stage }) {
                 <span
                   className={`${styles.speechBox_text} ${styles.textsecond}`}
                 >
-                  <strong id="strong">이에 이승의 이의 이승 (2^e, e^2)</strong>
+                  <strong id="strong">
+                    이거어느정도높이까지올라가는거에요?
+                  </strong>
                 </span>
               </div>
             </div>
@@ -461,4 +463,4 @@ function Question({ name, url, setStage, stage }) {
   );
 }
 
-export default Question;
+export default Question4;

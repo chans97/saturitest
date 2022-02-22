@@ -4,12 +4,8 @@
   font-family: "Noto Sans KR";
 }
 
-html,
-body {
-  margin: 0;
-}
-
 .main {
+  margin: 0;
   width: 360px;
   height: 606px;
   background: no-repeat url("image/schoolBackgound.png") center/cover;
@@ -75,6 +71,7 @@ body * {
   border: 1px solid #e48927;
   box-sizing: border-box;
   border-radius: 35px;
+  cursor: pointer;
 }
 
 a {
@@ -182,6 +179,7 @@ a:visited {
   font-size: 12px;
   padding: 2px 5px;
   margin: 7px;
+  height: 20px;
 }
 
 hr {
